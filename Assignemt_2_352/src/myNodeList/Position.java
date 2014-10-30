@@ -1,11 +1,11 @@
 package myNodeList;
 
 public class Position {
-    private int value;
-    private int rank;
+    protected int value;
+    //private int rank;
     public Position(){
     	value=0;
-    	rank=0;
+    	//rank=0;
     }
     /*
 	@Override
@@ -22,18 +22,20 @@ public class Position {
 		return true;
 	}
 	*/
-	public Position(int value,int rank){
+	public Position(int value){
     	this.value = value;
-    	this.rank=rank;
+    	//this.rank=rank;
     }
     public int element(){
     	return this.value;
     }
+    /*
     protected void setRank(int newRank){
     	this.rank=newRank;
     }
     protected int getRank(){
     	return rank;
     }
+    */
 
 }
