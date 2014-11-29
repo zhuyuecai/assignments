@@ -1,0 +1,139 @@
+%% $RCSfile: proj_proposal.tex,v $
+%% $Revision: 1.2 $
+%% $Date: 2010/04/23 02:40:16 $
+%% $Author: kevin $
+
+%\documentclass[11pt, a4paper, twoside, openright]{report}
+\documentclass[11pt, a4paper, openright]{report}
+\usepackage{float} % lets you have non-floating floats
+
+\usepackage{url} % for typesetting urls
+\usepackage[nottoc,notlof,notlot]{tocbibind} 
+\renewcommand\bibname{References}
+%  We don't want figures to float so we define
+%
+\newfloat{fig}{thp}{lof}[section]
+\floatname{fig}{Figure}
+\renewcommand*\contentsname{Table Of Contens}
+%% These are standard LaTeX definitions for the document
+%%
+
+
+\title{Kickoff, A Tool For Software Companies To Control Their Labor Cost Safely}
+\author{Zhu Yue Cai}
+
+
+%% This file can be used for creating a wide range of reports
+%%  across various Schools
+%%
+%% Set up some things, mostly for the front page, for your specific document
+%
+% Current options are:
+% [ecs|msor]              Which school you are in.
+%
+% [bschonscomp|mcompsci]  Which degree you are doing
+%                          You can also specify any other degree by name
+%                          (see below)
+% [font|image]            Use a font or an image for the VUW logo
+%                          The font option will only work on ECS systems
+%
+\usepackage[font]{vuwproject} 
+
+% You should specifiy your supervisor here with
+    \supervisor{Dr. Brandiff Caron}
+    %\authorAddress{3305 De Rouen, Montreal}
+% use \supervisors if there are more than one supervisor
+
+% Unless you've used the bschonscomp or mcompsci
+%  options above use
+%   \otherdegree{OTHER DEGREE OR DIPLOMA NAME}
+% here to specify degree
+
+% Comment this out if you want the date printed.
+\date{}
+\pagenumbering{alph}
+\begin{document}
+
+% Make the page numbering roman, until after the contents, etc.
+\frontmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+	
+	\addcontentsline{toc}{chapter}{Cover Page}
+  This document gives some ideas about how to write a project
+  proposal, and provides a template for a proposal. You should discuss
+  your proposal with your supervisor.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\maketitle
+%\pagestyle{empty} %get rid of header/footer for toc page
+\tableofcontents %put toc in
+%\cleardoublepage %start new page
+%\pagestyle{plain} % put headers/footers back on
+\setcounter{page}{2} %reset the page counter
+\addcontentsline{toc}{chapter}{Table of Contents}
+
+%\addcontentsline{toc}{section}{Executive Summary}
+
+% we want a list of the figures we defined
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Letter of Transmittal}
+\addcontentsline{toc}{chapter}{Letter of Transmittal}
+\setcounter{page}{3}
+%\listof{fig}{LIST OF FIGURE}
+%\addcontentsline{toc}{chapter}{LIST OF FIGURE}
+
+\chapter*{}
+\section* {1. Body of Proposal}
+\addcontentsline{toc}{chapter}{1. Body of Proposal}
+
+\subsection*{1.1 project definition}
+\addcontentsline{toc}{section}{1.1 project definition}
+
+\subsection*{1.2 Methodology}
+\addcontentsline{toc}{section}{1.2 Methodology}
+
+\subsection*{1.3 Conclusion}
+\addcontentsline{toc}{section}{1.3 Conclusion}
+
+
+\section* {2. SCHEDULE}
+\addcontentsline{toc}{chapter}{2. SCHEDULE}
+
+
+\section* {3. BUDGET}
+\addcontentsline{toc}{chapter}{3. BUDGET}
+
+
+\section* {4. QUALIFICATIONS}
+\addcontentsline{toc}{chapter}{4. QUALIFICATIONS}
+
+%\section* {8. CONCLUSION}
+%\addcontentsline{toc}{chapter}{8. CONCLUSION}
+
+\section* {5. PRESS RELEASE}
+\addcontentsline{toc}{chapter}{5. PRESS RELEASE}
+\input{press_release}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\bibliographystyle{ieeetr}
+\bibliographystyle{acm}
+\bibliography{paper}
+
+\end{document}
