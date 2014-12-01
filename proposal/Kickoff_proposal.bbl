@@ -1,10 +1,56 @@
 \begin{thebibliography}{1}
 
-\bibitem{Mantyla2013ICSM}
-{\sc Mika V.~Mantyla, Foutse~Khomh, B.~A.}
-\newblock On rapid releases and software testing.
-\newblock In {\em Proceedings of the 29th International Conference on Software
-  Maintenance (ICSM)\/} (Eindhoven, Netherlands, September 2013), IEEE,
-  pp.~20--29.
+\bibitem{Bird2007MSR}
+{\sc Bird, C., Gourley, A., Devanbu, P., Swaminathan, A., and Hsu, G.}
+\newblock Open borders? immigration in open source projects.
+\newblock In {\em MSR: Proceedings of the Fourth International Workshop on
+  Mining Software Repositories\/} (2007), IEEE Computer Society, p.~8.
+
+\bibitem{Canfora2012FSE}
+{\sc Canfora, G., Di~Penta, M., Oliveto, R., and Panichella, S.}
+\newblock Who is going to mentor newcomers in open source projects?
+\newblock 44.
+
+\bibitem{Cataldo2006CSCW}
+{\sc Cataldo, Marcelo an~dWagstrom, P.~A., Herbsleb, J.~D., and Carley, K.~M.}
+\newblock Identification of coordination requirements: implications for the
+  design of collaboration and awareness tools.
+\newblock In {\em Proceedings of the 2006 20th anniversary conference on
+  Computer supported cooperative work\/} (NewYork,NY,USA, 2006), CSCW'06, ACM,
+  pp.~353--362.
+
+\bibitem{Guthrie2001AMJ}
+{\sc Guthrie, J.~P.}
+\newblock High-involvement work practices, turnover, and productivity: Evidence
+  from new zealand.
+\newblock {\em Academy of management Journal 44}, 1 (2001), 180--190.
+
+\bibitem{Mockus2010FSE}
+{\sc Mockus, A.}
+\newblock Organizational volatility and its effects on software defects.
+\newblock In {\em Proceedings of the eighteenth ACM SIGSOFT international
+  symposium on Foundations of software engineering\/} (New York, NY, USA,
+  2010), FSE '10, ACM, pp.~117--126.
+
+\bibitem{Ricca2011PROFES}
+{\sc Ricca, F., Marchetto, A., and Torchiano, M.}
+\newblock On the difficulty of computing the truck factor.
+\newblock In {\em Proceedings of the 12th International Conference on
+  Product-focused Software Process Improvement\/} (Berlin, Heidelberg, 2011),
+  PROFES'11, Springer-Verlag, pp.~337--351.
+
+\bibitem{Torchiano2011Wetsom}
+{\sc Torchiano, M., Ricca, F., and Marchetto, A.}
+\newblock Is my project's truck factor low?: theoretical and empirical
+  considerations about the truck factor threshold.
+\newblock In {\em Proceedings of the 2nd International Workshop on Emerging
+  Trends in Software Metrics\/} (New York, NY, USA, 2011), WETSoM '11, ACM,
+  pp.~12--18.
+
+\bibitem{Zhou2011ICSE}
+{\sc Zhou, M., and Mockus, A.}
+\newblock Does the initial environment impact the future of developers?
+\newblock In {\em Proceedings of the 33rd International Conference on Software
+  Engineering\/} (New York, NY, USA, 2011), ICSE '11, ACM, pp.~271--280.
 
 \end{thebibliography}

@@ -4,9 +4,13 @@
 \contentsline {chapter}{1. Body of Proposal}{4}
 \contentsline {section}{1.1 project definition}{4}
 \contentsline {section}{1.2 Methodology}{4}
-\contentsline {section}{1.3 Conclusion}{4}
-\contentsline {chapter}{2. SCHEDULE}{4}
-\contentsline {chapter}{3. BUDGET}{4}
-\contentsline {chapter}{4. QUALIFICATIONS}{4}
-\contentsline {chapter}{5. PRESS RELEASE}{4}
-\contentsline {chapter}{References}{5}
+\contentsline {section}{1.3 Conclusion}{6}
+\contentsline {chapter}{2. SCHEDULE}{6}
+\contentsline {chapter}{3. BUDGET}{6}
+\contentsline {chapter}{4. QUALIFICATIONS}{6}
+\contentsline {chapter}{5. PRESS RELEASE}{6}
+\contentsline {chapter}{References}{7}
+\contentsline {chapter}{Appendix A: The Optimized TF Algorithm }{8}
+\contentsline {subsubsection}{Truck factor definitions}{8}
+\contentsline {subsubsection}{Stopping Condition}{9}
+\contentsline {subsubsection}{TODO:combinations}{9}
