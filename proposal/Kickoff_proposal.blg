@@ -1,5 +1,48 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: Kickoff_proposal.aux
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Kickoff_proposal.aux
 The style file: acm.bst
 Database file #1: paper.bib
 Warning--empty journal in Canfora2012FSE
+You've used 8 entries,
+            2253 wiz_defined-function locations,
+            593 strings with 6029 characters,
+and the built_in function-call counts, 3310 in all, are:
+= -- 330
+> -- 126
+< -- 0
++ -- 52
+- -- 44
+* -- 242
+:= -- 492
+add.period$ -- 24
+call.type$ -- 8
+change.case$ -- 46
+chr.to.int$ -- 0
+cite$ -- 9
+duplicate$ -- 153
+empty$ -- 282
+format.name$ -- 44
+if$ -- 732
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 8
+newline$ -- 43
+num.names$ -- 16
+pop$ -- 52
+preamble$ -- 1
+purify$ -- 38
+quote$ -- 0
+skip$ -- 111
+stack$ -- 0
+substring$ -- 225
+swap$ -- 55
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 32
+warning$ -- 1
+while$ -- 35
+width$ -- 9
+write$ -- 92
 (There was 1 warning)

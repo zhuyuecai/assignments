@@ -1,16 +1,15 @@
 \contentsline {chapter}{Cover Page}{i}
 \contentsline {chapter}{Table of Contents}{ii}
-\contentsline {chapter}{Letter of Transmittal}{3}
-\contentsline {chapter}{1. Body of Proposal}{4}
-\contentsline {section}{1.1 project definition}{4}
-\contentsline {section}{1.2 Methodology}{4}
-\contentsline {section}{1.3 Conclusion}{6}
-\contentsline {chapter}{2. SCHEDULE}{6}
-\contentsline {chapter}{3. BUDGET}{6}
-\contentsline {chapter}{4. QUALIFICATIONS}{6}
-\contentsline {chapter}{5. PRESS RELEASE}{6}
-\contentsline {chapter}{References}{7}
-\contentsline {chapter}{Appendix A: The Optimized TF Algorithm }{8}
-\contentsline {subsubsection}{Truck factor definitions}{8}
-\contentsline {subsubsection}{Stopping Condition}{9}
-\contentsline {subsubsection}{TODO:combinations}{9}
+\contentsline {chapter}{Executive Summary}{iii}
+\contentsline {chapter}{1. INTRODUCTION}{1}
+\contentsline {chapter}{2. METHODOLOGY}{2}
+\contentsline {chapter}{4. SCHEDULE}{4}
+\contentsline {chapter}{5. BUDGET}{5}
+\contentsline {chapter}{6. QUALIFICATIONS}{6}
+\contentsline {chapter}{7. PRESS RELEASE}{8}
+\contentsline {chapter}{3. Conclusion}{9}
+\contentsline {chapter}{References}{10}
+\contentsline {chapter}{Appendix A: The Optimized TF Algorithm }{11}
+\contentsline {subsubsection}{Truck factor definitions}{11}
+\contentsline {subsubsection}{Stopping Condition}{12}
+\contentsline {subsubsection}{TODO:combinations}{12}
