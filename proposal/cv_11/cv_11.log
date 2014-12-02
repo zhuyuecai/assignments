@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.13)  1 DEC 2014 17:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.13)  1 DEC 2014 17:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -420,45 +420,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--56
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/qpl/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/qpl/m/sc/9'.
-(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 165.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 165.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 169.
 [1
 
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 216.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 216.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
- [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
  (./cv_11.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
 Package rerunfilecheck Info: File `cv_11.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 220.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
  ) 
 Here is how much of TeX's memory you used:
- 7689 strings out of 495028
- 116548 string characters out of 6181497
- 241657 words of memory out of 5000000
- 10782 multiletter control sequences out of 15000+600000
- 54907 words of font info for 70 fonts, out of 8000000 for 9000
+ 7678 strings out of 495028
+ 116419 string characters out of 6181497
+ 239657 words of memory out of 5000000
+ 10780 multiletter control sequences out of 15000+600000
+ 51117 words of font info for 65 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
- 34i,5n,38p,569b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,5n,37p,569b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{/usr/share/texmf/font
 s/enc/dvips/tex-gyre/q-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qplb.pfb>
 </usr/share/texmf/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texmf/fonts/
 type1/public/tex-gyre/qplri.pfb>
-Output written on cv_11.pdf (2 pages, 103992 bytes).
+Output written on cv_11.pdf (1 page, 98395 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
- 8 named destinations out of 1000 (max. 500000)
- 21505 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 43 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
+ 19457 words of extra memory for PDF output out of 20736 (max. 10000000)
 

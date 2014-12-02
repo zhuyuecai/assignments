@@ -63,10 +63,14 @@
 
 \begin{abstract}
 	
-	\addcontentsline{toc}{chapter}{Cover Page}
-  This document gives some ideas about how to write a project
-  proposal, and provides a template for a proposal. You should discuss
-  your proposal with your supervisor.
+\addcontentsline{toc}{chapter}{Cover Page}
+It is harmful to a software company when there are some developers leave their positions. The damage is manifested as abandoned
+files on the software system that can be difficult to maintain. Therefore a tool to help software companies to understand the damage and how they can reduce the damage is very useful.
+
+This proposal suggests to build up a software Kickoff to fulfill this demand. The software will first extract change information from the company's version control system to build up the database. Then according to different input from the user, the optimized truck factor algorithm with a stopping condition calculates the damage for one or all possible layoff lists. After the list of abandoned files is generated, it applies the candidate selecting algorithm with to find out the experienced developers who can take over the abandoned files or to mentor new joiners to do so. 
+
+The direction for further improvement is also discussed in the proposal. 
+
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -82,7 +86,16 @@
 %\addcontentsline{toc}{chapter}{Letter of Transmittal}
 \setcounter{page}{3}
 \addcontentsline{toc}{chapter}{Executive Summary}
+It is harmful to a software company when there are some developers leave their positions. The damage is manifested as abandoned
+files on the software system that can be difficult to maintain. Previous researches show that, if the abandoned files are taken over by experienced developers who have the relative knowledge, or by new joiners who are mentored by such an experienced developer, the damage can be reduced. Therefore a tool to help the software companies understand the abandoned files for their layoff list and which remain developer could be able to take over the abandoned files is very useful.
 
+This proposal suggests to build up a software Kickoff to fulfill this demand. The software will first extract change information from the company's version control system to build up the database. Then according to different input from the user, the optimized truck factor algorithm with a stopping condition calculates the damage for one or all possible layoff lists. 
+
+After the list of abandoned files is generated, it applies the candidate selecting algorithm to find out the experienced developers who can take over the abandoned files or to mentor new joiners to do so. This algorithm generate 2 matrix: The dev-file matrix contains the the history of how many changes were made by a particular developer to a particular file; The file-file matrix contains the history of how many co-changes happened between a particular file and another particular file. The product of these two matrix how much knowledge of a particular file a particular developer has. Which helps Kickoff to find out demanded experienced developers.
+
+The direction for further improvement is also discussed in the proposal. The optimized truck factor algorithm is still too slow for large size developer team. Further improvement should be how to implement parallel computing technique to speed up the algorithm. The file-file matrix does not consider the files dependency. How to apply this idea at the candidate selecting algorithm is another important improvement.
+
+The rest of the proposal gives out the task schedule and budget approximation, as well as the qualification of the project creator.
 % we want a list of the figures we defined
 
 
@@ -132,7 +145,7 @@ Even with this optimization, the algorithm is only piratical to company with les
 
 
 The second problem is how to integrate previous researches to generate an algorithm for selecting the experienced developers for each abandoned file. We introduce a successor candidate selecting algorithm for this functionality. The general idea of this algorithm is to pick out those developers who have worked with the files that have co-changes with the abandoned files as candidates. The intuition behind is that if file A has changed with file B, and file A becomes abandoned, then the developer who works on file B will likely know something about file A. The idea of this algorithm comes from the matrix multiplication in Cataldo et al.'s\cite{Cataldo2006CSCW}
-
+TODO
 
 With all these function units prepared, the conceptual structure of Kickoff is shown in the following figure\ref{structure}.
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
@@ -141,7 +154,10 @@ With all these function units prepared, the conceptual structure of Kickoff is s
 	\label{structure}
 \end{center}
 
-
+\newpage
+\section*{3. DISCUSSION ON FURTHER IMPROVEMENT}
+\addcontentsline{toc}{chapter}{3. Conclusion}
+TODO
 \newpage
 \section* {4. SCHEDULE}
 \addcontentsline{toc}{chapter}{4. SCHEDULE}
@@ -187,10 +203,11 @@ Please check Table\ref{budget} for the detail of the project budget.
 \newpage
 \section* {6. QUALIFICATIONS}
 \addcontentsline{toc}{chapter}{6. QUALIFICATIONS}
-\begin{center}
-	\includegraphics[scale=0.8]{cv_11.pdf}
-	\label{structure}
-\end{center}
+TODO
+%\begin{center}
+%	\includegraphics[scale=0.8]{cv.pdf}
+%	\label{CV}
+%\end{center}
 %\section* {8. CONCLUSION}
 %\addcontentsline{toc}{chapter}{8. CONCLUSION}
 \newpage
@@ -274,34 +291,7 @@ We have:
 %\forall C:FL(C)\leq UFL(C)
 %\end{equation}
 For each group size, we order the developer combinations by their $UFL$ value and calculate the $FL$ for each developer combination until the stopping condition, $UFL(C)<max(FL)$ is met.
-In other words, we have shown that the number of files that a given group of developers modify, $UFL$, will be less than or equal to the number of files that these developers own exclusively, $FL$. Provided that we order the developers by the number of files that they modify, $UFL$, we can stop when the maximum loss that we calculated from the $FL$ function is greater than or equal to the total number of files that the subsequent group of developers modify. The algorithm is presented in Box?Algorithm
-\subsubsection{TODO:combinations}
-Unfortunately, we still must calculate must do $n!$ $UFL$ calculations. So we introduce a method to order these $UFL$ calculations.
-TODO
-\begin{algorithm}
-	\SetAlgoLined
-	\SetKwData{$d_i$}{$d_i$}\SetKwData{$F$}{$F$}
-	\SetKwFunction{K}{K}\SetKwFunction{KL}{KL}\SetKwFunction{SF}{SF}
-\end{algorithm}
-\begin{raggedright}
-	\scriptsize
-	$TFX = threashold$,$i=1$;\\
-	$F=$total number of files in the project;\\
-	For each developer $d_i$ in the team $D$, calculate $K(d_i)$;\\
-	Order $D$ by $K(d_i)$ decently;\\
-	While $i\leq |D|$ repeat the block\{\\
-	$Max\_fileLoss =0$;\\
-	$combination\_generating(D,i)$;\\
-	Initialize $input\_combination = input\_flow\_generating()$;\\
-	While $SF(input\_combination)\geq Max\_fileLoss$ repeat the block\{\\
-	If $KL(input\_combination) > Max\_fileLoss$ is true, $Max\_fileLoss=KL(input\_combination)$
-	$input\_combination = input\_flow\_generating()$;\\
-	\}\\
-	out print: if you lost a developer combination of size $size$, your maximum file loss would be $Max\_fileLoss$;\\
-	if $Max\_fileLoss \geq (TFX*F)$ is true the Truck Factor is $size$ and stop the algorithm;\\
-	Otherwise increase $i$ by 1 and continue;\\
-	\}\\
-\end{raggedright}
+In other words, we have shown that the number of files that a given group of developers modify, $UFL$, will be less than or equal to the number of files that these developers own exclusively, $FL$. Provided that we order the developers by the number of files that they modify, $UFL$, we can stop when the maximum loss that we calculated from the $FL$ function is greater than or equal to the total number of files that the subsequent group of developers modify. 
 
 
 

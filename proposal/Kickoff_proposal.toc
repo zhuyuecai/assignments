@@ -3,13 +3,13 @@
 \contentsline {chapter}{Executive Summary}{iii}
 \contentsline {chapter}{1. INTRODUCTION}{1}
 \contentsline {chapter}{2. METHODOLOGY}{2}
-\contentsline {chapter}{4. SCHEDULE}{4}
-\contentsline {chapter}{5. BUDGET}{5}
-\contentsline {chapter}{6. QUALIFICATIONS}{6}
+\contentsline {chapter}{3. Conclusion}{4}
+\contentsline {chapter}{4. SCHEDULE}{5}
+\contentsline {chapter}{5. BUDGET}{6}
+\contentsline {chapter}{6. QUALIFICATIONS}{7}
 \contentsline {chapter}{7. PRESS RELEASE}{8}
 \contentsline {chapter}{3. Conclusion}{9}
 \contentsline {chapter}{References}{10}
 \contentsline {chapter}{Appendix A: The Optimized TF Algorithm }{11}
 \contentsline {subsubsection}{Truck factor definitions}{11}
 \contentsline {subsubsection}{Stopping Condition}{12}
-\contentsline {subsubsection}{TODO:combinations}{12}
