@@ -91,7 +91,7 @@ files on the software system that can be difficult to maintain. Previous researc
 
 This proposal suggests to build up a software Kickoff to fulfill this demand. The software will first extract change information from the company's version control system to build up the database. Then according to different input from the user, the optimized truck factor algorithm with a stopping condition calculates the damage for one or all possible layoff lists. 
 
-After the list of abandoned files is generated, it applies the candidate selecting algorithm to find out the experienced developers who can take over the abandoned files or to mentor new joiners to do so. This algorithm generate 2 matrix: The dev-file matrix contains the the history of how many changes were made by a particular developer to a particular file; The file-file matrix contains the history of how many co-changes happened between a particular file and another particular file. The product of these two matrix how much knowledge of a particular file a particular developer has. Which helps Kickoff to find out demanded experienced developers.
+After the list of abandoned files is generated, it applies the candidate selecting algorithm to find out the experienced developers who can take over the abandoned files or to mentor new joiners to do so. This algorithm generate 2 matrices: The dev-file matrix contains the the history of how many changes were made by a particular developer to a particular file; The file-file matrix contains the history of how many co-changes happened between a particular file and another particular file. The product of these two matrices how much knowledge of a particular file a particular developer has. Which helps Kickoff to find out demanded experienced developers.
 
 The direction for further improvement is also discussed in the proposal. The optimized truck factor algorithm is still too slow for large size developer team. Further improvement should be how to implement parallel computing technique to speed up the algorithm. The file-file matrix does not consider the files dependency. How to apply this idea at the candidate selecting algorithm is another important improvement.
 
@@ -112,7 +112,7 @@ The rest of the proposal gives out the task schedule and budget approximation, a
 %\section* {1. Body of Proposal}
 %\addcontentsline{toc}{chapter}{1. Body of Proposal}
 
-\section*{1. INTRODUCTION}
+\section*{1. PROJECT DEFINITION}
 \addcontentsline{toc}{chapter}{1. INTRODUCTION}
 Laying off developers and recruiting new joiners are two common software company activities. But Previous research has shown that high turnover rates leads to a decrease in productivity \cite{Guthrie2001AMJ}. 
 Like other jobs that involve knowledge workers, 
@@ -120,17 +120,17 @@ when a software developer leaves, there is a knowledge gap. This gap is manifest
 files on the software system that can be difficult to maintain.
 
 
-Generally, these abandoned files are taken over by new joiners or remain developers. There is a large literature on mentoring and integrating new developers into software projects. For example, Zhou and Mockus examined the impact of development environment on new developers\cite{Zhou2011ICSE} . Bird et al. \cite{Bird2007MSR} looked at the survival rate of new developers. Zhou and Mockus examined the amount of time until a developer becomes productive. Mockus \cite{Mockus2010FSE} suggested mentors for developers based on past work and Canfora et al. \cite{Canfora2012FSE} suggested mentors based on the email communication network. The experienced developers who have the knowledge to the abandoned files will help reduce the damage. They can take over the abandoned files themselves or mentor the new joiner to do so.
+Generally, these abandoned files are taken over by new joiners or remain developers.But the time needed for successors to learn how to maintain the abandoned files could be very long, if the successor has no knowledge of the files. Therefore finding the right successors for the abandoned files is important to software companies when they need to lay off developers.
 
-
-Therefore We believe that a software which can calculate the number of abandoned files and produce a list of experienced  developers who have the knowledge to those files for a given layoff list is very helpful. Moreover, If this software could tell the same information for all the possible 
-layoff lists based on input critical variables, the decision process would be simplified dramatically. This is the motivation of Kickoff. It is a useful management tool for software company to manage its knowledge storage.
+ There is a large literature on mentoring and integrating new developers into software projects. For example, Zhou and Mockus examined the impact of development environment on new developers\cite{Zhou2011ICSE} . Bird et al. \cite{Bird2007MSR} looked at the survival rate of new developers. Zhou and Mockus examined the amount of time until a developer becomes productive. Mockus \cite{Mockus2010FSE} suggested mentors for developers based on past work and Canfora et al. \cite{Canfora2012FSE} suggested mentors based on the email communication network. 
+ 
+ The experienced developers who have the knowledge to the abandoned files will help reduce the damage. They can take over the abandoned files themselves or mentor the new joiner to do so. Thus we believe that a software which can calculate the number of abandoned files and produce a list of experienced  developers who have the knowledge to those files for a given layoff list is very helpful. Moreover, If this software could tell the same information for all the possible layoff lists based on input critical variables, the decision process would be simplified dramatically. This is the motivation of Kickoff. It is a useful management tool for software company to manage its knowledge storage.
 
 
 
 \newpage
-\section*{2. METHODOLOGY}
-\addcontentsline{toc}{chapter}{2. METHODOLOGY}
+\section*{2. THE DESIGN OF KICKOFF}
+\addcontentsline{toc}{chapter}{2. THE DESIGN OF KICKOFF}
 
 In order to minimize the cost, we will use only opensource tool to build Kickoff. And what we need is "PostgreSQL"as our database.
 
@@ -145,7 +145,7 @@ Even with this optimization, the algorithm is only piratical to company with les
 
 
 The second problem is how to integrate previous researches to generate an algorithm for selecting the experienced developers for each abandoned file. We introduce a successor candidate selecting algorithm for this functionality. The general idea of this algorithm is to pick out those developers who have worked with the files that have co-changes with the abandoned files as candidates. The intuition behind is that if file A has changed with file B, and file A becomes abandoned, then the developer who works on file B will likely know something about file A. The idea of this algorithm comes from the matrix multiplication in Cataldo et al.'s\cite{Cataldo2006CSCW}
-TODO
+The algorithm will first generate two matrices from the database. One is the developer-file matrix whose entries are the number of change a developer has made to a file. The other one is the file-file matrix whose entries are the number of co-changes a file has with the abandoned file. The product of these two matrices will give us a measure of how much knowledge a developer has to the abandoned file. Then we could select the one with the largest knowledge measure to take over the abandoned file.
 
 With all these function units prepared, the conceptual structure of Kickoff is shown in the following figure\ref{structure}.
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
@@ -157,7 +157,9 @@ With all these function units prepared, the conceptual structure of Kickoff is s
 \newpage
 \section*{3. DISCUSSION ON FURTHER IMPROVEMENT}
 \addcontentsline{toc}{chapter}{3. Conclusion}
-TODO
+As mentioned above, the optimized truck factor algorithm is pratical only for companies with less than 100 developers. Since the number of calculation is the factorial of the developer team size, this number is too huge to be pratical when the team size is greater than 100. Further improvement of the algorithm is neccessary such that the software is practical for large companies. One direction would be applying parallel computing technique to the algorithm. Multicore central processing unit becomes very common now. We could separate the task into a few parts and process them the same time. By this way we could speed up the algorithm.
+
+The other improvement direction would be applying the file dependency idea into the generating of the file-file matrix. In the successor candidate selecting algorithm we simply assume that the file dependency is always the same between 2 files. But this is not always the case. Then how the difference of dependency affects the developer knowledge need to be researched. And also the algorithm need to be modified according to the research result.    
 \newpage
 \section* {4. SCHEDULE}
 \addcontentsline{toc}{chapter}{4. SCHEDULE}
@@ -203,24 +205,27 @@ Please check Table\ref{budget} for the detail of the project budget.
 \newpage
 \section* {6. QUALIFICATIONS}
 \addcontentsline{toc}{chapter}{6. QUALIFICATIONS}
-TODO
-%\begin{center}
-%	\includegraphics[scale=0.8]{cv.pdf}
-%	\label{CV}
-%\end{center}
-%\section* {8. CONCLUSION}
-%\addcontentsline{toc}{chapter}{8. CONCLUSION}
-\newpage
+
+\begin{center}
+	\includegraphics[scale=0.8]{cv.pdf}
+	\label{CV}
+\end{center}
+
 \section* {7. PRESS RELEASE}
 \addcontentsline{toc}{chapter}{7. PRESS RELEASE}
 \input{press_release}
 
 \newpage
-\section*{3. CONCLUSION}
-\addcontentsline{toc}{chapter}{3. Conclusion}
+\section*{8. CONCLUSION}
+\addcontentsline{toc}{chapter}{8. Conclusion}
 It is harmful for a software project when there are some developers leaves. The damage is manifested as abandoned
 files on the software system that can be difficult to maintain.
-We believe that this damage can be reduced by finding experienced developers who have worked with the files that have co-changes with the abandoned files before to take over the abandoned files or to mentor new joiners to do so. Therefore we propose to apply the optimized truck factor algorithm to find out the abandoned files, and the candidate selecting algorithm to find out the experienced developers to build up the software Kickoff. With Kickoff, a software company can understand how harmful a particular layoff list is and how to reduce the damage. With Kickoff, a software company can also obtain information about all possible layoff solution by inputing the critical variable. Kickoff will be a very useful tool in software company management. In this proposal we've already scratched out the conceptual structure of it.
+
+We believe that this damage can be reduced by finding experienced developers who have worked with the files that have co-changes with the abandoned files before to take over the abandoned files or to mentor new joiners to do so. Therefore we propose to apply the optimized truck factor algorithm to find out the abandoned files, and the candidate selecting algorithm to find out the experienced developers to build up the software Kickoff.
+
+ With Kickoff, a software company can understand how harmful a particular layoff list is and how to reduce the damage. With Kickoff, a software company can also obtain information about all possible layoff solution by inputing the critical variable. Kickoff will be a very useful tool in software company management. 
+ 
+ In this proposal we've already scratched out the conceptual structure of it and discussed on its further improvement.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
